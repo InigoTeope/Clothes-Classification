@@ -7,9 +7,9 @@ def load_model():
   return model
 model=load_model()
 st.write("""
-# Weather Classification System"""
+# Clothes Classification System"""
 )
-file=st.file_uploader("Select any images that would represent weather conditions (Shine, Rain, Cloudy, Sunrise)",type=["jpg","png"])
+file=st.file_uploader("Select a image that would contain a type of apparel",type=["jpg","png"])
 A
 import cv2
 from PIL import Image,ImageOps
@@ -27,6 +27,6 @@ else:
     image=Image.open(file)
     st.image(image,use_column_width=True)
     prediction=import_and_predict(image,model)
-    class_names=['Shine', 'Rain', 'Cloudy', 'Sunrise']
+      class_names=['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
     string="OUTPUT : "+class_names[np.argmax(prediction)]
     st.success(string)
