@@ -10,7 +10,8 @@ st.write("""
 # Clothes Classification System"""
 )
 file=st.file_uploader("Select a image that would contain a type of apparel",type=["jpg","png"])
-A
+
+
 import cv2
 from PIL import Image,ImageOps
 import numpy as np
