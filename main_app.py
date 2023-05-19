@@ -3,7 +3,7 @@ import tensorflow as tf
 
 @st.cache_resource
 def load_model():
-  model=tf.keras.models.load_model('final_best_model')
+  model=tf.keras.models.load_model('final_model_best')
   return model
 model=load_model()
 st.write("""
